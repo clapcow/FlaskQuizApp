@@ -16,7 +16,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    container_name: flask
+    container_name: flaskv2
     command: gunicorn --bind 0.0.0.0:8000 --workers 4 "app.create_app:create_app()"
     volumes:
       - ./:/var/www
